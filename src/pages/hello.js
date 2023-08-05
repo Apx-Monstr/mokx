@@ -1,7 +1,7 @@
+import Sample from '@/app/components/sample'
+
 export default function hello(){
     return (
-        <div>
-            Hello from hello page
-        </div>
+        <Sample/>
     )
 }
