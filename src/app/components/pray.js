@@ -3,7 +3,7 @@
 import Link from 'next/link';
 export default function pray(){
     return (
-        <Link>
+        <Link href="/">
             <div className = "cursor-pointer h-screen w-screen bg-white flex items-center">
                 <div className="w-full flex flex-col items-center">
                     <img className="h-48 w-48" src="./mokxLogo.png"/>
