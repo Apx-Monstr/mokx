@@ -4,13 +4,15 @@ import Pray from '@/app/components/pray';
 import OnBoard  from '@/app/components/OnBoard';
 import SignIn from '@/app/components/SignIn';
 import Message from './components/Message';
+import SignUp from './components/SignUp';
 export default function Home() {
   return (
-    <div className=''>
-      {/* <Pray/> */}
+    <div className='max-w-[100vw] overflow-x-hidden'>
+      <Pray/>
       {/* <OnBoard/> */}
-      {/* <SignIn/> */}
-      <Message/>
+      {/* <SignUp/> */}
+      {/* <SignUp/> */}
+      {/* <Message/> */}
     </div>
   )
 }
