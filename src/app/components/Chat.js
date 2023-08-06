@@ -1,5 +1,5 @@
-// import aryaRound from '@/assets/arya-round.png'
-
+// Its a chat component that renders individual chats that are send by Bot to the user
+// along with time
 const Chat = (props) => {
     return(
         <div className="p-2 flex flex-col">
@@ -19,6 +19,7 @@ const Chat = (props) => {
     )
 }
 
+// default value of chat prop
 Chat.defaultProps={
     text:"     ",
     recent:false,

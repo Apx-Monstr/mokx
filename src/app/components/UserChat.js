@@ -1,3 +1,4 @@
+// It is the component to render User chats individually
 
 const Chat = (props) => {
     return(

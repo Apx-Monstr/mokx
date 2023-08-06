@@ -1,4 +1,7 @@
-// import arya from '@/assets/arya.svg';
+// This Page is the onBoarding page that onboards user to the site and allows
+// them to go to signup or login page depending upon their need
+import Link from 'next/link';
+import '@/app/globals.css'; 
 import {Inter} from 'next/font/google';
 const inter = Inter({subsets:['latin']})
 function onBoard(){
@@ -49,11 +52,16 @@ function onBoard(){
                     </p>
                 </div>
                 <div className='text-prim flex flex-col gap-2 font-medium'>
-                    <button className='w-full bg-ysec rounded py-3'>
-                        Sign up with mail
-                    </button>
+                    <Link href="/SignUp">
+                        <button className='w-full bg-ysec rounded py-3'>
+                            Sign up with mail
+                        </button>
+                    </Link>
                     <div className='text-white mx-auto py-1'>
-                        Existing Account? <span className='text-ysec cursor-pointer'>Log in</span>
+                        Existing Account? 
+                        <Link href="/SignIn">
+                            <span className='text-ysec cursor-pointer'>Log in</span>
+                        </Link>
                     </div>
                 </div>
             </div>

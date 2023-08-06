@@ -1,9 +1,12 @@
-import Chat from './Chat';
-import UserChat from './UserChat'
-
-
-
+import Chat from '@/app/components/Chat';
+import UserChat from '@/app/components/UserChat'
+import '@/app/globals.css'; 
+import Link from 'next/link';
 function Message(){
+    // It is a static chat that is rendered conoditionally based on the properties of
+    // individual chats and uses Chat and User chat components to render chats respectively
+    // Mosty this data is dynamic and is meant to be fetched from a database through APIs
+    // but as content in the UI is static so this approach works perfectly
     const chats = [
         {
             msg:"Hello! How are You?",
@@ -71,11 +74,13 @@ function Message(){
             <div className='sticky max-w-screen-lg mx-auto top-0 w-full bg-white'>
                 <div className='p-2 justify-between items-center flex'>
                     <div className='flex items-center'>
-                        <div className='p-2 pr-3'>
-                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 1L1 5M1 5L5 9M1 5L13 5" stroke="#69235B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
+                        <Link href="/OnBoard">
+                            <div className='p-2 pr-3'>
+                                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 1L1 5M1 5L5 9M1 5L13 5" stroke="#69235B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </Link>
                         <div className='flex gap-4 items-center'>
                             <img className='h-10 w-10' src = "./arya-round.png"/>
                             <div className='text-prim font-bold text-xl'>

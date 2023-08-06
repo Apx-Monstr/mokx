@@ -1,10 +1,6 @@
-import Image from 'next/image'
-import Sample from '@/app/components/sample';
+// This is the Main page that will load when user hits the website
+
 import Pray from '@/app/components/pray';
-import OnBoard  from '@/app/components/OnBoard';
-import SignIn from '@/app/components/SignIn';
-import Message from './components/Message';
-import SignUp from './components/SignUp';
 export default function Home() {
   return (
     <div className='max-w-[100vw] overflow-x-hidden'>

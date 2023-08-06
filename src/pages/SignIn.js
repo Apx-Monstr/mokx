@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import '@/app/globals.css'; 
 function SignIn(){
     return (
         <div className="h-full min-h-screen w-screen relative flex items-center">
@@ -8,15 +10,15 @@ function SignIn(){
             </div>
             <div className="flex flex-col items-center p-4 mx-auto">
                 <div className="flex flex-col items-center gap-4">
-                    <p className="text-xl font-bold text-prim relative z-20">
+                    <div className="text-xl font-bold text-prim relative z-20">
                         Log in to Mokx
                         <div className="absolute bg-ysec h-2 w-14 -left-1 bottom-0.5 -z-10">
 
                         </div>
-                    </p>
-                    <p className="text-prim text-[14px] font-normal text-center max-w-[80%]">
+                    </div>
+                    <div className="text-prim text-[14px] font-normal text-center max-w-[80%]">
                         Welcome back! Sign in using your social account or email to continue with us 
-                    </p>
+                    </div>
                 </div>
                 <div className=" flex gap-6 p-4">
                     <div className="p-2 rounded-full border-2 cursor-pointer">
@@ -41,33 +43,37 @@ function SignIn(){
                 </div>
                 <div className='text-sm relative w-full flex my-2'>
                     <div className='h-px top-1/2 left-1/4 w-1/2 absolute bg-gray-500'></div>
-                    <p className='mx-auto z-50 bg-white px-2 text-prim'>
+                    <div className='mx-auto z-50 bg-white px-2 text-prim'>
                         OR
-                    </p>
+                    </div>
                 </div>
                 <div className="flex flex-col gap-4 w-[320px]">
                     <div className="border-b-gray-500 border-b">
-                        <p className="text-xs font-semibold text-prim">
+                        <div className="text-xs font-semibold text-prim">
                             Your Email
-                        </p>
+                        </div>
                         <input className="focus:outline-none w-full p-2" type="email"/>
                     </div>
                     <div className="border-b-gray-500 border-b">
-                        <p className="text-xs font-semibold text-prim">
+                        <div className="text-xs font-semibold text-prim">
                             Password
-                        </p>
+                        </div>
                         <input className="focus:outline-none w-full p-2" type="password"/>
                     </div>
                 </div>
             </div>
             <div className=" absolute bottom-0 w-full p-4 px-10">
                 <div className="flex flex-col gap-4 max-w-md mx-auto">
-                    <button className='w-full bg-ysec rounded py-3 text-prim'>
-                        Login
-                    </button>
-                    <button className='w-full text-ysec rounded py-3'>
-                        Forgot Password?
-                    </button>
+                    <Link href="/Message">
+                        <button className='w-full bg-ysec rounded py-3 text-prim'>
+                            Login
+                        </button>
+                    </Link>
+                    <Link href="/Message">
+                        <button className='w-full text-ysec rounded py-3'>
+                            Forgot Password?
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
